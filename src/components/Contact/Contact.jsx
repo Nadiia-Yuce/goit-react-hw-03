@@ -2,18 +2,20 @@ import { FaUser } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
 import css from "./Contact.module.css";
 
-export default function Contact({ contact }) {
+export default function Contact({ contact: { name, number, id }, onDelete }) {
   return (
     <div>
       <div className={css.wrap}>
         <FaUser />
-        <p className={css.text}>{contact.name}</p>
+        <p className={css.text}>{name}</p>
       </div>
       <div className={css.wrap}>
         <FaPhone />
-        <p className={css.text}>{contact.number}</p>
+        <p className={css.text}>{number}</p>
       </div>
-      <button type="button">Delete</button>
+      <button type="button" className={css.delete} onClick={() => onDelete(id)}>
+        Delete
+      </button>
     </div>
   );
 }
