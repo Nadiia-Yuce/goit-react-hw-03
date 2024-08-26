@@ -33,8 +33,8 @@ export default function ContactForm({ onAdd }) {
       validationSchema={contactSchema}
     >
       <Form className={css.form}>
-        <label htmlFor="contact">Name</label>
-        <Field name="contactName" id="contact" className={css.formInput} />
+        <label htmlFor="contactName">Name</label>
+        <Field name="contactName" id="contactName" className={css.formInput} />
         <ErrorMessage
           name="contactName"
           component="span"
