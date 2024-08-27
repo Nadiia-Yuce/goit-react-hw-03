@@ -8,7 +8,10 @@ export default function ContactList({ contacts, onDelete }) {
     //onDelete просто передається далі в Contact
     <ul className={css.list}>
       {contacts.map(contact => (
-        <li key={contact.id} className={css.item}>
+        <li
+          key={contact.id}
+          className={`${css.item} animate__animated animate__fadeInUp`}
+        >
           <Contact contact={contact} onDelete={onDelete} />
         </li>
       ))}

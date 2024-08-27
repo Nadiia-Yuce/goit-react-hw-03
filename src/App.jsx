@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import ContactForm from "./components/ContactForm/ContactForm";
 import ContactList from "./components/ContactList/ContactList";
 import SearchBox from "./components/SearchBox/SearchBox";
+import css from "./App.module.css";
 import initialData from "./contacts.json";
+import { FaAddressBook } from "react-icons/fa";
 
 export default function App() {
   //ф-я отримання значення з localStorage
@@ -53,7 +55,10 @@ export default function App() {
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <div className={css.titleWrap}>
+        <FaAddressBook size={35} color="#62453C" />
+        <h1>Phonebook</h1>
+      </div>
       <ContactForm onAdd={addContact} />
       <SearchBox value={searchValue} onSearch={setsearchValue} />
       <ContactList contacts={toSearch} onDelete={removeContact} />
