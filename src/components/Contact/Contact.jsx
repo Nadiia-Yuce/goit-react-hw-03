@@ -13,6 +13,8 @@ export default function Contact({ contact: { name, number, id }, onDelete }) {
         <FaPhone />
         <p className={css.text}>{number}</p>
       </div>
+      {/* при події onClick викликається коллбек onDelete, якому передається поточне значеня id, по якому має видалятися обʼєкт */}
+      {/* атрибут id ф-ї onDelete піднімається до початкової ф-ї removeContact в App  */}
       <button type="button" className={css.delete} onClick={() => onDelete(id)}>
         Delete
       </button>
