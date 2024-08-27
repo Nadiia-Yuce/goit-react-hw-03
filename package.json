@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/roboto": "^5.0.14",
     "animate.css": "^4.1.1",
+    "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "modern-normalize": "^3.0.0",
     "nanoid": "^5.0.7",
