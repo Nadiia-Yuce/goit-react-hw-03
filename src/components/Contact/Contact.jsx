@@ -5,8 +5,11 @@ import css from "./Contact.module.css";
 import clsx from "clsx";
 
 export default function Contact({ contact: { name, number, id }, onDelete }) {
+  //стан для видалення елемента і додавання класу
   const [isRemoving, setIsRemoving] = useState(false);
 
+  //обробник видалення по кліку
+  //setTimeout потрібен для затримки функції, щоб анімація встигла відпрацювати
   const handleRemove = () => {
     setIsRemoving(true);
     setTimeout(() => {
@@ -16,6 +19,7 @@ export default function Contact({ contact: { name, number, id }, onDelete }) {
 
   return (
     <div
+      // записуємо клас за умовою видалення
       className={clsx(
         css.card,
         "animate__animated",

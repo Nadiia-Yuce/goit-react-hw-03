@@ -24,6 +24,7 @@
 .text {
   margin: 0;
   font-size: 18px;
+  color: rgb(73, 56, 115);
 }
 
 .delete {
