@@ -32,7 +32,10 @@ export default function Contact({ contact: { name, number, id }, onDelete }) {
       </div>
       <div className={css.wrap}>
         <FaPhone size={16} color="rgb(97, 76, 150)" />
-        <p className={css.text}>{number}</p>
+        {/* <p className={css.text}>{number}</p> */}
+        <a className={`${css.text} ${css.tel}`} href={`tel: ${number}`}>
+          {number}
+        </a>
       </div>
       {/* при події onClick викликається коллбек onDelete, якому передається поточне значеня id, по якому має видалятися обʼєкт */}
       {/* атрибут id ф-ї onDelete піднімається до початкової ф-ї removeContact в App  */}

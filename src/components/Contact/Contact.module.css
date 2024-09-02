@@ -27,6 +27,15 @@
   color: rgb(73, 56, 115);
 }
 
+.tel {
+  transition: color 250ms ease;
+}
+
+.tel:focus,
+.tel:hover {
+  color: #ffffff;
+}
+
 .delete {
   position: absolute;
   top: 50%;
